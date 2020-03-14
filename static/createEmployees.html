@@ -1,0 +1,59 @@
+<div class="container">  
+    <head>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autotab/1.9.2/js/jquery.autotab.js"></script>
+        <style type="text/css">
+        #textForm{
+            height: 100vh;
+            display: flex;
+        }
+        .form-content{
+            width: 620px;
+            margin: auto;
+        }
+        .row{
+            margin: 20px 0;
+            text-align: center;
+            display: block;
+        }
+        .btn{
+            
+        }
+        .heading{
+            text-align: center;
+        }
+        .form-control{
+            display: inline-block;
+            width: 50%;
+            margin: 10px 0 10px 0;
+        }
+        .label{
+            text-align: center;
+            margin-left: 15px;
+        }
+    </style>
+    </head>
+        <div class="container" id="textForm">
+            <div class="form-content">
+                <h1 class="heading" >Enter Employee Details below</h1>
+                <form method="post" action="/createEmployees">
+                    <div class="row">
+                    <label for="name">Name :</label>
+                    <input type="text" class="form-control" name="Name" placeholder="Enter Your Fullname here" required><br>
+                    <label for="email">Email Id :</label>
+                    <input type="text" class="form-control" name="email" placeholder="Enter Your Email Id here" required><br>
+                    <label for="salary">Salary :</label>
+                    <input type="text" maxlength="5" class="form-control" id="auto" name="salary" placeholder="Enter Your Salary here" required>
+                        <script> 
+                            $(document).ready(function(){
+                                $('#auto').autotab('number');
+                            })  
+                        </script>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Submit" class="btn btn-primary"}>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>

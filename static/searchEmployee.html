@@ -1,0 +1,49 @@
+<div class="container">  
+    <head>
+        <style type="text/css">
+        #textForm{
+            height: 100vh;
+            display: flex;
+        }
+        .form-content{
+            width: 620px;
+            margin: auto;
+        }
+        .row{
+            margin: 20px 0;
+            text-align: center;
+            display: block;
+        }
+        .btn{
+            
+        }
+        .heading{
+            text-align: center;
+        }
+        .form-control{
+            display: inline-block;
+            width: 50%;
+            margin: 10px 0 10px 0;
+        }
+        .label{
+            text-align: center;
+            margin-left: 15px;
+        }
+    </style>
+    </head>
+        <h1 class="heading" >Fill below Details to find Employees</h1>
+            <form method="post" action="/getEmployeeDetails">
+                <div class="row">
+                    <label for="salary">Salary is </label>
+                    <select class="form-control" id="option" name="option" required>
+                        <option value="Less than">Less than</option>
+                        <option value="More than">More than</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="salary">Salary :</label>
+                <input type="text" maxlength="5" class="form-control" id="auto" name="salary" placeholder="Enter Salary here" required><br>
+                    <input type="submit" value="Submit" class="btn btn-primary"}>
+                </div>
+            </form> 
+</div>
