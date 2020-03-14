@@ -12,8 +12,8 @@ app.listen(port, () => {
 
 const db = mysql.createConnection({
     host     : 'localhost',
-    user     : 'root',
-    password : 'anuj@123',
+    user     : 'root',     //you have to enter your db username
+    password : 'anuj@123', //you have to enter your db password
     database : 'employeesdb',
     multipleStatements: true
 });
